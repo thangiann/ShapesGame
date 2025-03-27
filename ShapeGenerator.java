@@ -34,7 +34,7 @@ public class ShapeGenerator{
             int bonus = random.nextInt(11);
 
             BonusCircle circle = new BonusCircle(bounding_area_values[index], bonus);
-            shapes.add(circle);
+            shapes.add(circle); 
         }
         
     }

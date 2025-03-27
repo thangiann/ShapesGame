@@ -8,7 +8,6 @@ public class Triangle extends Shape{
     public double computeArea(){
         
         return 0.5 * super.getBounding_area();
-
     }
 
 }
