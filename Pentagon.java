@@ -7,7 +7,7 @@ public class Pentagon extends Shape{
 
     public double computeArea(){
         
-        return 3/4 * super.getBounding_area();
+        return 0.75 * super.getBounding_area();
 
     }
 }

@@ -53,13 +53,12 @@ public class ShapeGenerator{
             shapes.add(circle); 
         }
 
-        for (int i = 0; i < number; i++){
+        for (int i = 0; i < number; i ++){
 
             int index = random.nextInt(bounding_area_values.length);
-
-            Pentagon pentagon = new Pentagon(index);
+            System.out.println(bounding_area_values[index]);
+            Pentagon pentagon = new Pentagon(bounding_area_values[index]);
             shapes.add(pentagon);
-        
         }
 
     }
@@ -101,7 +100,7 @@ public class ShapeGenerator{
         while (sp.hasShapes()) {
             
             System.out.println(sp.toString());
-            System.out.println("Next shape" + sp.nextShape().toString());
+            System.out.println("Next shape " + sp.nextShape().toString());
             System.out.println();
         }
     }
