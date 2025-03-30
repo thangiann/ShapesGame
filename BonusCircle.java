@@ -9,6 +9,6 @@ public class BonusCircle extends Circle {
 
     @Override
     public String toString(){
-        return getType() + ":" + String.valueOf(computeArea()) + String.format("(Bonus:/s)", String.valueOf(bonus_points));
+        return getType() + ":" + String.valueOf(computeArea()) + String.format(" (Bonus: %s)", String.valueOf(bonus_points));
     }
 }
