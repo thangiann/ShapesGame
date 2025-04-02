@@ -21,7 +21,7 @@ public class Player {
 
     public void playerShape(Shape shape){
 
-        System.out.println(shape.toString());
+        System.out.println("Incoming shape " + shape.toString());
         System.out.println("Do you want to accept? (y/n)");
 
         boolean input = true;
@@ -31,6 +31,9 @@ public class Player {
                 String answer = in.nextLine();
                 if (answer.equals("y") || answer.equals("n"))  {
                     input = false;
+                    playerShapes.add(shape);
+                    System.out.println(String.format("Added %s points", shape.computePoints()));
+                    this.playerPoints += shape.computePoints();
                 }
             } catch (Exception e) {
                 continue;
@@ -39,7 +42,7 @@ public class Player {
     }
     
     public boolean isStackFull(){
-        return playerShapes.isEmpty();
+        return this.playerShapes.size() == this.size;
     }
 
     public void printStack(){
